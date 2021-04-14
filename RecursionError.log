@@ -1,0 +1,1985 @@
+============================= test session starts ==============================
+platform linux -- Python 3.8.9, pytest-6.2.3, py-1.10.0, pluggy-0.13.1
+rootdir: /home/babenek/wunderwaffe
+plugins: cov-2.11.1
+collected 500 items
+
+test_dummy.py .......................................................... [ 11%]
+........................................................................ [ 26%]
+........................................................................ [ 40%]
+........................................................................ [ 54%]
+........................................................................ [ 69%]
+........................................................................ [ 83%]
+........................................................................ [ 98%]
+..........                                                               [100%]
+INTERNALERROR> Traceback (most recent call last):
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/_pytest/main.py", line 269, in wrap_session
+INTERNALERROR>     session.exitstatus = doit(config, session) or 0
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/_pytest/main.py", line 323, in _main
+INTERNALERROR>     config.hook.pytest_runtestloop(session=session)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/pluggy/hooks.py", line 286, in __call__
+INTERNALERROR>     return self._hookexec(self, self.get_hookimpls(), kwargs)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/pluggy/manager.py", line 93, in _hookexec
+INTERNALERROR>     return self._inner_hookexec(hook, methods, kwargs)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/pluggy/manager.py", line 84, in <lambda>
+INTERNALERROR>     self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/pluggy/callers.py", line 203, in _multicall
+INTERNALERROR>     gen.send(outcome)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/pytest_cov/plugin.py", line 271, in pytest_runtestloop
+INTERNALERROR>     self.cov_controller.finish()
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/pytest_cov/engine.py", line 44, in ensure_topdir_wrapper
+INTERNALERROR>     return meth(self, *args, **kwargs)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/pytest_cov/engine.py", line 167, in summary
+INTERNALERROR>     total = self.cov.report(**options)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/control.py", line 913, in report
+INTERNALERROR>     return reporter.report(morfs, outfile=file)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/summary.py", line 45, in report
+INTERNALERROR>     for fr, analysis in get_analysis_to_report(self.coverage, morfs):
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/report.py", line 70, in get_analysis_to_report
+INTERNALERROR>     analysis = coverage._analyze(fr)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/control.py", line 808, in _analyze
+INTERNALERROR>     return Analysis(data, it, self._file_mapper)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/results.py", line 30, in __init__
+INTERNALERROR>     self._arc_possibilities = sorted(self.file_reporter.arcs())
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/python.py", line 213, in arcs
+INTERNALERROR>     return self.parser.arcs()
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 273, in arcs
+INTERNALERROR>     self._analyze_ast()
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 283, in _analyze_ast
+INTERNALERROR>     aaa.analyze()
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 561, in analyze
+INTERNALERROR>     code_object_handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 1168, in _code_object__FunctionDef
+INTERNALERROR>     exits = self.add_body_arcs(node.body, from_start=ArcStart(-start))
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 942, in _handle__If
+INTERNALERROR>     exits |= self.add_body_arcs(node.orelse, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 940, in _handle__If
+INTERNALERROR>     exits = self.add_body_arcs(node.body, from_start=from_start)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 698, in add_body_arcs
+INTERNALERROR>     prev_starts = self.add_arcs(body_node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 661, in add_arcs
+INTERNALERROR>     return handler(node)
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 962, in _handle__Return
+INTERNALERROR>     return_start = ArcStart(here, cause="the return on line {lineno} wasn't executed")
+INTERNALERROR>   File "/home/babenek/.local/lib/python3.8/site-packages/coverage/parser.py", line 493, in __new__
+INTERNALERROR>     return super(ArcStart, cls).__new__(cls, lineno, cause)
+INTERNALERROR>   File "<string>", line 1, in __new__
+INTERNALERROR> RecursionError: maximum recursion depth exceeded while calling a Python object
+
+============================= 500 passed in 1.05s ==============================
